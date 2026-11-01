@@ -1,0 +1,30 @@
+Name       test1.pld;
+Partno     ATF16V8B ;
+Date       ;
+Revision   ;
+Designer   ;
+Company    ;
+Assembly   ;
+Location   U1 ;
+Device     G16V8;
+
+Pin 1  = A15;
+Pin 2  = A14;
+Pin 3  = A13;
+Pin 4  = MREQ;
+Pin 5  = RD;
+Pin 6  = WR;
+
+Pin 19 = ROM_CS;
+Pin 18 = RAM_CS;
+Pin 17 = IO_CS;
+Pin 16 = RD_ERR;
+
+
+!ROM_CS = !MREQ & !A15 & !A14;
+
+!RAM_CS = !MREQ & !A15 & A14;
+
+!IO_CS = !MREQ & A15;
+
+RD_ERR = !RD & !WR;

@@ -1,0 +1,4 @@
+ORDER: A15, A14, A13, MREQ, RD, WR, ROM_CS, RAM_CS, IO_CS, RD_ERR;
+VECTORS:
+       0    0    0    0     0   0   L       H       H      H
+       0    0    0    0     0   1   L       H       H      L
